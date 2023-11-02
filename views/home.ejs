@@ -1,0 +1,16 @@
+<%- include("header") -%>
+<div class="box">
+    <% for(var i=0; i < data.length; i++){ %>
+        <div class="item">
+            <input type="checkbox" name="delete">
+            <p>
+                <%= data[i] %>
+            </p>
+        </div>
+        <% } %>
+            <form class="item" action="/" method="post">
+                <input type="text" name="addtodo" placeholder="New Item" autocomplete="off">
+                <button type="submit" name="button" value="<%= title %>">+</button>
+            </form>
+</div>
+<%- include("footer") -%>
